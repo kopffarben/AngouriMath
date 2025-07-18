@@ -2,10 +2,7 @@
   
   <PropertyGroup>
     <TargetFrameworks>
-      net7.0;
-      net472;
-      netstandard2.0;
-      netstandard2.1;
+      net8.0
     </TargetFrameworks>
 
     <PackageId>AngouriMath</PackageId>
@@ -13,6 +10,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Compile Remove="Core/Entity/GenericMath/**" Condition="'$(TargetFramework)' != 'net7.0'" />
+    <Compile Remove="Core/Entity/GenericMath/**" Condition="'$(TargetFramework)' != 'net8.0'" />
   </ItemGroup>
 </Project>

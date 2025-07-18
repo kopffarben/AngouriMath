@@ -2,12 +2,14 @@
 
 This repository contains the **AngouriMath** symbolic algebra project. It is organized as a .NET solution under `Sources/AngouriMath.sln` with multiple projects:
 
-- **AngouriMath** – the main C# library located in `Sources/AngouriMath/AngouriMath`.
-- **Analyzers** – Roslyn analyzers for the project (`Sources/Analyzers`).
-- **Wrappers** – language wrappers (F#, Interactive, C++, etc.) in `Sources/Wrappers`.
-- **Terminal** – a CLI application written in F# under `Sources/Terminal`.
-- **Tests** – unit tests and wrapper tests under `Sources/Tests`.
-- **Utils** – helper tools used for code generation (`Sources/Utils`).
+- **Sources/AngouriMath** – Core C# library implementing symbolic algebra functionality.
+- **Sources/Analyzers** – Roslyn analyzers ensuring code quality across the project.
+- **Sources/Wrappers** – Language wrappers including F#, Interactive, and C++ bindings.
+- **Sources/Terminal** – CLI application written in F# for quick expression evaluation.
+- **Sources/Tests** – Collection of unit tests covering both C# and wrappers.
+- **Sources/Utils** – Utility tools used for code generation and helper scripts.
+
+The solution file `Sources/AngouriMath.sln` aggregates these projects so they can be built together.
 
 ## Namespaces
 
@@ -65,3 +67,41 @@ namespace AngouriMath {
 
 This UML diagram illustrates the central `Entity` type with its main descendants and several function nodes. The library defines many more nodes following the same pattern.
 
+## Build Instructions
+
+AngouriMath uses the .NET SDK. To restore dependencies and build all projects, run:
+
+```bash
+ dotnet build Sources/AngouriMath.sln
+```
+
+To format the code according to the project's `.editorconfig` rules:
+
+```bash
+ dotnet format
+```
+
+## Running Tests
+
+The test suite can be executed with:
+
+```bash
+ dotnet test Sources/AngouriMath.sln
+```
+
+This runs unit tests for the core library as well as wrapper projects.
+
+## Contributing
+
+1. Fork the repository and create your feature branch.
+2. Commit changes with clear messages in English.
+3. Run `dotnet format` and `dotnet test` before opening a pull request.
+4. Ensure new functionality includes unit tests where applicable.
+
+For detailed contribution guidelines, see `CONTRIBUTING.md` in the repository root.
+
+## Additional Resources
+
+- [Project Website](https://am.angouri.org)
+- [Quickstart Guide](https://am.angouri.org/quickstart/)
+- [Wiki](https://am.angouri.org/wiki/)

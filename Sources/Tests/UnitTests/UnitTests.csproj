@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
     <Platforms>AnyCPU;x64</Platforms>
@@ -37,7 +37,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\AngouriMath\AngouriMath\AngouriMath.csproj">
-      <SetTargetFramework>TargetFramework=net7.0</SetTargetFramework>
+      <SetTargetFramework>TargetFramework=net8.0</SetTargetFramework>
     </ProjectReference>
   </ItemGroup>
 
